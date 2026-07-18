@@ -1,0 +1,10 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+# generated data + frozen outputs are reproducible; keep the repo light
+data/synthea/*.json
+findings/*.json
+findings/*.html
+!findings/.gitkeep
+!data/synthea/.gitkeep

@@ -1,0 +1,120 @@
+{
+  "patient": {
+    "id": "benign-06",
+    "name": "Michael Smith",
+    "age": 68,
+    "sex": "male",
+    "active_conditions": [],
+    "active_meds": []
+  },
+  "source": "cohort",
+  "events": [
+    {
+      "date": "2021-03-10",
+      "type": "lab",
+      "system": "hematologic",
+      "code": "hemoglobin",
+      "value": 14.3,
+      "unit": "g/dL",
+      "ref_low": 12.0,
+      "ref_high": 16.0,
+      "encounter_id": "v2021"
+    },
+    {
+      "date": "2022-03-19",
+      "type": "lab",
+      "system": "hematologic",
+      "code": "hemoglobin",
+      "value": 13.7,
+      "unit": "g/dL",
+      "ref_low": 12.0,
+      "ref_high": 16.0,
+      "encounter_id": "v2022"
+    },
+    {
+      "date": "2023-02-14",
+      "type": "lab",
+      "system": "hematologic",
+      "code": "hemoglobin",
+      "value": 14.3,
+      "unit": "g/dL",
+      "ref_low": 12.0,
+      "ref_high": 16.0,
+      "encounter_id": "v2023"
+    },
+    {
+      "date": "2021-03-10",
+      "type": "lab",
+      "system": "renal",
+      "code": "creatinine",
+      "value": 0.9,
+      "unit": "mg/dL",
+      "ref_low": 0.6,
+      "ref_high": 1.1,
+      "encounter_id": "v2021"
+    },
+    {
+      "date": "2022-03-19",
+      "type": "lab",
+      "system": "renal",
+      "code": "creatinine",
+      "value": 0.8,
+      "unit": "mg/dL",
+      "ref_low": 0.6,
+      "ref_high": 1.1,
+      "encounter_id": "v2022"
+    },
+    {
+      "date": "2023-02-14",
+      "type": "lab",
+      "system": "renal",
+      "code": "creatinine",
+      "value": 0.9,
+      "unit": "mg/dL",
+      "ref_low": 0.6,
+      "ref_high": 1.1,
+      "encounter_id": "v2023"
+    },
+    {
+      "date": "2021-03-10",
+      "type": "lab",
+      "system": "renal",
+      "code": "egfr",
+      "value": 104.7,
+      "unit": "mL/min/1.73m2",
+      "ref_low": 90,
+      "ref_high": 120,
+      "encounter_id": "v2021"
+    },
+    {
+      "date": "2022-03-19",
+      "type": "lab",
+      "system": "renal",
+      "code": "egfr",
+      "value": 99.9,
+      "unit": "mL/min/1.73m2",
+      "ref_low": 90,
+      "ref_high": 120,
+      "encounter_id": "v2022"
+    },
+    {
+      "date": "2023-02-14",
+      "type": "lab",
+      "system": "renal",
+      "code": "egfr",
+      "value": 104.1,
+      "unit": "mL/min/1.73m2",
+      "ref_low": 90,
+      "ref_high": 120,
+      "encounter_id": "v2023"
+    },
+    {
+      "date": "2023-02-14",
+      "type": "condition",
+      "system": "unspecified",
+      "code": "Vitamin D deficiency (repleted)",
+      "onset": "2021-03-10",
+      "status": "resolved"
+    }
+  ]
+}

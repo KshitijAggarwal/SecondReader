@@ -1,0 +1,25 @@
+[project]
+name = "longitudinal-reader"
+version = "0.1.0"
+description = "A diagnostic agent that owns the time axis: reasons across a patient's entire multi-year record to surface the longitudinal diagnosis no single visit could reveal."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "anthropic>=0.117.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.scripts]
+longitudinal-reader = "longitudinal_reader.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["longitudinal_reader"]
+
+# Kept local to this subproject on purpose: the Synthea data-generation step is a
+# separate Java toolchain (see scripts/gen_synthea.sh) and other siblings under
+# SecondReader carry their own deps. This project's *Python* footprint is tiny —
+# the load-bearing work is deterministic primitives + a handful of Claude calls.

@@ -1,0 +1,33 @@
+{
+  "patient": {
+    "id": "hero-1",
+    "name": "Margaret Ellison",
+    "age": 58,
+    "sex": "female",
+    "active_conditions": ["Essential hypertension"],
+    "active_meds": ["Amlodipine 5 mg", "Atorvastatin 20 mg"]
+  },
+  "source": "hero",
+  "_note": "Hand-authored test case. The drifting lab: creatinine climbs 0.9->1.5 over 4 years, in/near range each visit, never acted on. eGFR falls in lockstep. This is the mechanically undeniable receipt.",
+  "events": [
+    {"date": "2021-02-10", "type": "lab", "system": "renal", "code": "creatinine", "value": 0.9, "unit": "mg/dL", "ref_low": 0.6, "ref_high": 1.1, "encounter_id": "e2021", "note": "labeled normal at annual physical"},
+    {"date": "2021-02-10", "type": "lab", "system": "renal", "code": "egfr", "value": 95, "unit": "mL/min/1.73m2", "ref_low": 90, "ref_high": 120, "encounter_id": "e2021"},
+    {"date": "2021-02-10", "type": "lab", "system": "endocrine", "code": "a1c", "value": 5.4, "unit": "%", "ref_low": 4.0, "ref_high": 5.7, "encounter_id": "e2021"},
+
+    {"date": "2022-03-15", "type": "lab", "system": "renal", "code": "creatinine", "value": 1.0, "unit": "mg/dL", "ref_low": 0.6, "ref_high": 1.1, "encounter_id": "e2022", "note": "within normal limits"},
+    {"date": "2022-03-15", "type": "lab", "system": "renal", "code": "egfr", "value": 88, "unit": "mL/min/1.73m2", "ref_low": 90, "ref_high": 120, "encounter_id": "e2022"},
+
+    {"date": "2023-04-02", "type": "lab", "system": "renal", "code": "creatinine", "value": 1.2, "unit": "mg/dL", "ref_low": 0.6, "ref_high": 1.1, "encounter_id": "e2023", "note": "flagged high but 'likely dehydration', no follow-up ordered"},
+    {"date": "2023-04-02", "type": "lab", "system": "renal", "code": "egfr", "value": 75, "unit": "mL/min/1.73m2", "ref_low": 90, "ref_high": 120, "encounter_id": "e2023"},
+    {"date": "2023-04-02", "type": "lab", "system": "endocrine", "code": "a1c", "value": 5.5, "unit": "%", "ref_low": 4.0, "ref_high": 5.7, "encounter_id": "e2023"},
+
+    {"date": "2024-05-20", "type": "lab", "system": "renal", "code": "creatinine", "value": 1.4, "unit": "mg/dL", "ref_low": 0.6, "ref_high": 1.1, "encounter_id": "e2024", "note": "high; recheck advised, patient not called back"},
+    {"date": "2024-05-20", "type": "lab", "system": "renal", "code": "egfr", "value": 64, "unit": "mL/min/1.73m2", "ref_low": 90, "ref_high": 120, "encounter_id": "e2024"},
+
+    {"date": "2025-06-10", "type": "lab", "system": "renal", "code": "creatinine", "value": 1.5, "unit": "mg/dL", "ref_low": 0.6, "ref_high": 1.1, "encounter_id": "e2025", "note": "annual physical; no renal workup on record"},
+    {"date": "2025-06-10", "type": "lab", "system": "renal", "code": "egfr", "value": 58, "unit": "mL/min/1.73m2", "ref_low": 90, "ref_high": 120, "encounter_id": "e2025"},
+    {"date": "2025-06-10", "type": "lab", "system": "metabolic", "code": "calcium", "value": 9.4, "unit": "mg/dL", "ref_low": 8.6, "ref_high": 10.2, "encounter_id": "e2025", "note": "normal"},
+
+    {"date": "2021-02-10", "type": "condition", "system": "cardiovascular", "code": "Essential hypertension", "onset": "2019-06-01", "status": "active"}
+  ]
+}

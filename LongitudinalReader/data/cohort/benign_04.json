@@ -1,0 +1,162 @@
+{
+  "patient": {
+    "id": "benign-04",
+    "name": "Patricia Adams",
+    "age": 57,
+    "sex": "male",
+    "active_conditions": [],
+    "active_meds": []
+  },
+  "source": "cohort",
+  "events": [
+    {
+      "date": "2021-05-20",
+      "type": "lab",
+      "system": "metabolic",
+      "code": "calcium",
+      "value": 9.5,
+      "unit": "mg/dL",
+      "ref_low": 8.6,
+      "ref_high": 10.2,
+      "encounter_id": "v2021"
+    },
+    {
+      "date": "2022-06-15",
+      "type": "lab",
+      "system": "metabolic",
+      "code": "calcium",
+      "value": 9.3,
+      "unit": "mg/dL",
+      "ref_low": 8.6,
+      "ref_high": 10.2,
+      "encounter_id": "v2022"
+    },
+    {
+      "date": "2023-05-15",
+      "type": "lab",
+      "system": "metabolic",
+      "code": "calcium",
+      "value": 9.5,
+      "unit": "mg/dL",
+      "ref_low": 8.6,
+      "ref_high": 10.2,
+      "encounter_id": "v2023"
+    },
+    {
+      "date": "2021-05-20",
+      "type": "lab",
+      "system": "renal",
+      "code": "egfr",
+      "value": 103.9,
+      "unit": "mL/min/1.73m2",
+      "ref_low": 90,
+      "ref_high": 120,
+      "encounter_id": "v2021"
+    },
+    {
+      "date": "2022-06-15",
+      "type": "lab",
+      "system": "renal",
+      "code": "egfr",
+      "value": 99.8,
+      "unit": "mL/min/1.73m2",
+      "ref_low": 90,
+      "ref_high": 120,
+      "encounter_id": "v2022"
+    },
+    {
+      "date": "2023-05-15",
+      "type": "lab",
+      "system": "renal",
+      "code": "egfr",
+      "value": 104.3,
+      "unit": "mL/min/1.73m2",
+      "ref_low": 90,
+      "ref_high": 120,
+      "encounter_id": "v2023"
+    },
+    {
+      "date": "2021-05-20",
+      "type": "lab",
+      "system": "endocrine",
+      "code": "a1c",
+      "value": 5.3,
+      "unit": "%",
+      "ref_low": 4.0,
+      "ref_high": 5.7,
+      "encounter_id": "v2021"
+    },
+    {
+      "date": "2022-06-15",
+      "type": "lab",
+      "system": "endocrine",
+      "code": "a1c",
+      "value": 5.1,
+      "unit": "%",
+      "ref_low": 4.0,
+      "ref_high": 5.7,
+      "encounter_id": "v2022"
+    },
+    {
+      "date": "2023-05-15",
+      "type": "lab",
+      "system": "endocrine",
+      "code": "a1c",
+      "value": 5.4,
+      "unit": "%",
+      "ref_low": 4.0,
+      "ref_high": 5.7,
+      "encounter_id": "v2023"
+    },
+    {
+      "date": "2021-05-20",
+      "type": "lab",
+      "system": "renal",
+      "code": "creatinine",
+      "value": 0.9,
+      "unit": "mg/dL",
+      "ref_low": 0.6,
+      "ref_high": 1.1,
+      "encounter_id": "v2021"
+    },
+    {
+      "date": "2022-06-15",
+      "type": "lab",
+      "system": "renal",
+      "code": "creatinine",
+      "value": 0.8,
+      "unit": "mg/dL",
+      "ref_low": 0.6,
+      "ref_high": 1.1,
+      "encounter_id": "v2022"
+    },
+    {
+      "date": "2023-05-15",
+      "type": "lab",
+      "system": "renal",
+      "code": "creatinine",
+      "value": 0.9,
+      "unit": "mg/dL",
+      "ref_low": 0.6,
+      "ref_high": 1.1,
+      "encounter_id": "v2023"
+    },
+    {
+      "date": "2023-05-15",
+      "type": "symptom",
+      "system": "constitutional",
+      "text": "dizziness",
+      "attribution": "orthostatic, hydration advised",
+      "clinician": "PCP",
+      "encounter_id": "v2023"
+    },
+    {
+      "date": "2023-05-15",
+      "type": "condition",
+      "system": "unspecified",
+      "code": "Vitamin D deficiency (repleted)",
+      "onset": "2021-05-20",
+      "status": "resolved"
+    }
+  ]
+}

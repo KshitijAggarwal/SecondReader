@@ -1,0 +1,187 @@
+{
+  "patient": {
+    "id": "benign-07",
+    "name": "Patricia Kim",
+    "age": 67,
+    "sex": "male",
+    "active_conditions": [],
+    "active_meds": []
+  },
+  "source": "cohort",
+  "events": [
+    {
+      "date": "2021-05-03",
+      "type": "lab",
+      "system": "renal",
+      "code": "egfr",
+      "value": 104.7,
+      "unit": "mL/min/1.73m2",
+      "ref_low": 90,
+      "ref_high": 120,
+      "encounter_id": "v2021"
+    },
+    {
+      "date": "2022-05-03",
+      "type": "lab",
+      "system": "renal",
+      "code": "egfr",
+      "value": 100.5,
+      "unit": "mL/min/1.73m2",
+      "ref_low": 90,
+      "ref_high": 120,
+      "encounter_id": "v2022"
+    },
+    {
+      "date": "2023-04-12",
+      "type": "lab",
+      "system": "renal",
+      "code": "egfr",
+      "value": 103.5,
+      "unit": "mL/min/1.73m2",
+      "ref_low": 90,
+      "ref_high": 120,
+      "encounter_id": "v2023"
+    },
+    {
+      "date": "2024-04-06",
+      "type": "lab",
+      "system": "renal",
+      "code": "egfr",
+      "value": 100.1,
+      "unit": "mL/min/1.73m2",
+      "ref_low": 90,
+      "ref_high": 120,
+      "encounter_id": "v2024"
+    },
+    {
+      "date": "2025-04-21",
+      "type": "lab",
+      "system": "renal",
+      "code": "egfr",
+      "value": 103.7,
+      "unit": "mL/min/1.73m2",
+      "ref_low": 90,
+      "ref_high": 120,
+      "encounter_id": "v2025"
+    },
+    {
+      "date": "2021-05-03",
+      "type": "lab",
+      "system": "endocrine",
+      "code": "a1c",
+      "value": 5.4,
+      "unit": "%",
+      "ref_low": 4.0,
+      "ref_high": 5.7,
+      "encounter_id": "v2021"
+    },
+    {
+      "date": "2022-05-03",
+      "type": "lab",
+      "system": "endocrine",
+      "code": "a1c",
+      "value": 5.1,
+      "unit": "%",
+      "ref_low": 4.0,
+      "ref_high": 5.7,
+      "encounter_id": "v2022"
+    },
+    {
+      "date": "2023-04-12",
+      "type": "lab",
+      "system": "endocrine",
+      "code": "a1c",
+      "value": 5.3,
+      "unit": "%",
+      "ref_low": 4.0,
+      "ref_high": 5.7,
+      "encounter_id": "v2023"
+    },
+    {
+      "date": "2024-04-06",
+      "type": "lab",
+      "system": "endocrine",
+      "code": "a1c",
+      "value": 5.1,
+      "unit": "%",
+      "ref_low": 4.0,
+      "ref_high": 5.7,
+      "encounter_id": "v2024"
+    },
+    {
+      "date": "2025-04-21",
+      "type": "lab",
+      "system": "endocrine",
+      "code": "a1c",
+      "value": 5.3,
+      "unit": "%",
+      "ref_low": 4.0,
+      "ref_high": 5.7,
+      "encounter_id": "v2025"
+    },
+    {
+      "date": "2021-05-03",
+      "type": "lab",
+      "system": "endocrine",
+      "code": "tsh",
+      "value": 2.1,
+      "unit": "mIU/L",
+      "ref_low": 0.4,
+      "ref_high": 4.0,
+      "encounter_id": "v2021"
+    },
+    {
+      "date": "2022-05-03",
+      "type": "lab",
+      "system": "endocrine",
+      "code": "tsh",
+      "value": 1.5,
+      "unit": "mIU/L",
+      "ref_low": 0.4,
+      "ref_high": 4.0,
+      "encounter_id": "v2022"
+    },
+    {
+      "date": "2023-04-12",
+      "type": "lab",
+      "system": "endocrine",
+      "code": "tsh",
+      "value": 2.1,
+      "unit": "mIU/L",
+      "ref_low": 0.4,
+      "ref_high": 4.0,
+      "encounter_id": "v2023"
+    },
+    {
+      "date": "2024-04-06",
+      "type": "lab",
+      "system": "endocrine",
+      "code": "tsh",
+      "value": 1.5,
+      "unit": "mIU/L",
+      "ref_low": 0.4,
+      "ref_high": 4.0,
+      "encounter_id": "v2024"
+    },
+    {
+      "date": "2025-04-21",
+      "type": "lab",
+      "system": "endocrine",
+      "code": "tsh",
+      "value": 2.1,
+      "unit": "mIU/L",
+      "ref_low": 0.4,
+      "ref_high": 4.0,
+      "encounter_id": "v2025"
+    },
+    {
+      "date": "2024-04-06",
+      "type": "symptom",
+      "system": "constitutional",
+      "text": "fatigue",
+      "attribution": "acute viral illness, resolved",
+      "clinician": "PCP",
+      "encounter_id": "v2024"
+    }
+  ]
+}

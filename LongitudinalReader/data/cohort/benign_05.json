@@ -1,0 +1,211 @@
+{
+  "patient": {
+    "id": "benign-05",
+    "name": "Michael Garcia",
+    "age": 73,
+    "sex": "female",
+    "active_conditions": [],
+    "active_meds": []
+  },
+  "source": "cohort",
+  "events": [
+    {
+      "date": "2021-03-01",
+      "type": "lab",
+      "system": "renal",
+      "code": "creatinine",
+      "value": 0.9,
+      "unit": "mg/dL",
+      "ref_low": 0.6,
+      "ref_high": 1.1,
+      "encounter_id": "v2021"
+    },
+    {
+      "date": "2022-02-20",
+      "type": "lab",
+      "system": "renal",
+      "code": "creatinine",
+      "value": 0.8,
+      "unit": "mg/dL",
+      "ref_low": 0.6,
+      "ref_high": 1.1,
+      "encounter_id": "v2022"
+    },
+    {
+      "date": "2023-01-30",
+      "type": "lab",
+      "system": "renal",
+      "code": "creatinine",
+      "value": 0.9,
+      "unit": "mg/dL",
+      "ref_low": 0.6,
+      "ref_high": 1.1,
+      "encounter_id": "v2023"
+    },
+    {
+      "date": "2021-03-01",
+      "type": "lab",
+      "system": "metabolic",
+      "code": "calcium",
+      "value": 9.5,
+      "unit": "mg/dL",
+      "ref_low": 8.6,
+      "ref_high": 10.2,
+      "encounter_id": "v2021"
+    },
+    {
+      "date": "2022-02-20",
+      "type": "lab",
+      "system": "metabolic",
+      "code": "calcium",
+      "value": 9.3,
+      "unit": "mg/dL",
+      "ref_low": 8.6,
+      "ref_high": 10.2,
+      "encounter_id": "v2022"
+    },
+    {
+      "date": "2023-01-30",
+      "type": "lab",
+      "system": "metabolic",
+      "code": "calcium",
+      "value": 9.5,
+      "unit": "mg/dL",
+      "ref_low": 8.6,
+      "ref_high": 10.2,
+      "encounter_id": "v2023"
+    },
+    {
+      "date": "2021-03-01",
+      "type": "lab",
+      "system": "renal",
+      "code": "egfr",
+      "value": 104.8,
+      "unit": "mL/min/1.73m2",
+      "ref_low": 90,
+      "ref_high": 120,
+      "encounter_id": "v2021"
+    },
+    {
+      "date": "2022-02-20",
+      "type": "lab",
+      "system": "renal",
+      "code": "egfr",
+      "value": 100.2,
+      "unit": "mL/min/1.73m2",
+      "ref_low": 90,
+      "ref_high": 120,
+      "encounter_id": "v2022"
+    },
+    {
+      "date": "2023-01-30",
+      "type": "lab",
+      "system": "renal",
+      "code": "egfr",
+      "value": 104.4,
+      "unit": "mL/min/1.73m2",
+      "ref_low": 90,
+      "ref_high": 120,
+      "encounter_id": "v2023"
+    },
+    {
+      "date": "2021-03-01",
+      "type": "lab",
+      "system": "hematologic",
+      "code": "hemoglobin",
+      "value": 14.3,
+      "unit": "g/dL",
+      "ref_low": 12.0,
+      "ref_high": 16.0,
+      "encounter_id": "v2021"
+    },
+    {
+      "date": "2022-02-20",
+      "type": "lab",
+      "system": "hematologic",
+      "code": "hemoglobin",
+      "value": 13.8,
+      "unit": "g/dL",
+      "ref_low": 12.0,
+      "ref_high": 16.0,
+      "encounter_id": "v2022"
+    },
+    {
+      "date": "2023-01-30",
+      "type": "lab",
+      "system": "hematologic",
+      "code": "hemoglobin",
+      "value": 14.4,
+      "unit": "g/dL",
+      "ref_low": 12.0,
+      "ref_high": 16.0,
+      "encounter_id": "v2023"
+    },
+    {
+      "date": "2021-03-01",
+      "type": "lab",
+      "system": "endocrine",
+      "code": "a1c",
+      "value": 5.4,
+      "unit": "%",
+      "ref_low": 4.0,
+      "ref_high": 5.7,
+      "encounter_id": "v2021"
+    },
+    {
+      "date": "2022-02-20",
+      "type": "lab",
+      "system": "endocrine",
+      "code": "a1c",
+      "value": 5.0,
+      "unit": "%",
+      "ref_low": 4.0,
+      "ref_high": 5.7,
+      "encounter_id": "v2022"
+    },
+    {
+      "date": "2023-01-30",
+      "type": "lab",
+      "system": "endocrine",
+      "code": "a1c",
+      "value": 5.3,
+      "unit": "%",
+      "ref_low": 4.0,
+      "ref_high": 5.7,
+      "encounter_id": "v2023"
+    },
+    {
+      "date": "2021-03-01",
+      "type": "lab",
+      "system": "endocrine",
+      "code": "tsh",
+      "value": 2.0,
+      "unit": "mIU/L",
+      "ref_low": 0.4,
+      "ref_high": 4.0,
+      "encounter_id": "v2021"
+    },
+    {
+      "date": "2022-02-20",
+      "type": "lab",
+      "system": "endocrine",
+      "code": "tsh",
+      "value": 1.5,
+      "unit": "mIU/L",
+      "ref_low": 0.4,
+      "ref_high": 4.0,
+      "encounter_id": "v2022"
+    },
+    {
+      "date": "2023-01-30",
+      "type": "lab",
+      "system": "endocrine",
+      "code": "tsh",
+      "value": 2.0,
+      "unit": "mIU/L",
+      "ref_low": 0.4,
+      "ref_high": 4.0,
+      "encounter_id": "v2023"
+    }
+  ]
+}

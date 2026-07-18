@@ -1,0 +1,25 @@
+{
+  "patient": {
+    "id": "hero-2",
+    "name": "Dana Okafor",
+    "age": 47,
+    "sex": "female",
+    "active_conditions": [],
+    "active_meds": []
+  },
+  "source": "hero",
+  "_note": "Hand-authored test case. The reattributed symptom: fatigue said 4 times to 3 clinicians over 13 months, each explained away benignly, with an orphan low ferritin never followed up. Distributed anchoring, invisible in any single chart view.",
+  "events": [
+    {"date": "2023-01-12", "type": "symptom", "system": "constitutional", "text": "fatigue", "attribution": "stress at work", "clinician": "PCP", "encounter_id": "f1"},
+    {"date": "2023-01-12", "type": "lab", "system": "endocrine", "code": "tsh", "value": 2.1, "unit": "mIU/L", "ref_low": 0.4, "ref_high": 4.0, "encounter_id": "f1", "note": "normal"},
+
+    {"date": "2023-05-08", "type": "symptom", "system": "constitutional", "text": "tiredness", "attribution": "perimenopause", "clinician": "Gynecology", "encounter_id": "f2"},
+    {"date": "2023-05-08", "type": "lab", "system": "hematologic", "code": "ferritin", "value": 11, "unit": "ng/mL", "ref_low": 30, "ref_high": 300, "encounter_id": "f2", "note": "low ferritin noted in results, no iron studies or follow-up ordered"},
+    {"date": "2023-05-08", "type": "lab", "system": "hematologic", "code": "hemoglobin", "value": 12.6, "unit": "g/dL", "ref_low": 12.0, "ref_high": 16.0, "encounter_id": "f2", "note": "low-normal"},
+
+    {"date": "2023-09-20", "type": "symptom", "system": "constitutional", "text": "exhaustion", "attribution": "viral syndrome", "clinician": "Urgent Care", "encounter_id": "f3"},
+
+    {"date": "2024-02-15", "type": "symptom", "system": "constitutional", "text": "low energy", "attribution": "poor sleep and deconditioning", "clinician": "PCP", "encounter_id": "f4"},
+    {"date": "2024-02-15", "type": "lab", "system": "hematologic", "code": "hemoglobin", "value": 11.8, "unit": "g/dL", "ref_low": 12.0, "ref_high": 16.0, "encounter_id": "f4", "note": "now just below range"}
+  ]
+}

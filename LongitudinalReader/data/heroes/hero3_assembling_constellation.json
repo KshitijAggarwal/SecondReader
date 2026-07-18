@@ -1,0 +1,25 @@
+{
+  "patient": {
+    "id": "hero-3",
+    "name": "Priya Nakamura",
+    "age": 52,
+    "sex": "female",
+    "active_conditions": ["Raynaud's phenomenon"],
+    "active_meds": []
+  },
+  "source": "hero",
+  "_note": "Hand-authored test case. The constellation that only closes over time: Raynaud's (2022) -> intermittent dysphagia (2023) -> orphan positive ANA (2024) -> skin tightening (2025) = systemic sclerosis assembling across three years, each finding low-alarm and specialty-scattered.",
+  "events": [
+    {"date": "2022-11-03", "type": "condition", "system": "vascular", "code": "Raynaud's phenomenon", "onset": "2022-11-03", "status": "active", "note": "cold-induced color change in fingers; attributed to primary Raynaud's"},
+
+    {"date": "2023-08-14", "type": "symptom", "system": "gi", "text": "intermittent difficulty swallowing solids", "attribution": "likely reflux, trial of PPI", "clinician": "PCP", "encounter_id": "g2"},
+    {"date": "2023-08-14", "type": "condition", "system": "gi", "code": "reflux (GERD)", "onset": "2023-08-14", "status": "active"},
+
+    {"date": "2024-06-22", "type": "lab", "system": "immunologic", "code": "ana", "value": 320, "unit": "titer (1:320)", "encounter_id": "g3", "note": "ANA positive 1:320 homogeneous, ordered during a wellness visit, never followed up or referred"},
+
+    {"date": "2025-05-30", "type": "symptom", "system": "skin", "text": "skin tightening over the fingers (sclerodactyly), puffy hands", "attribution": "asked dermatology, awaiting", "clinician": "PCP", "encounter_id": "g4"},
+
+    {"date": "2023-08-14", "type": "lab", "system": "hematologic", "code": "hemoglobin", "value": 13.4, "unit": "g/dL", "ref_low": 12.0, "ref_high": 16.0, "encounter_id": "g2", "note": "normal"},
+    {"date": "2024-06-22", "type": "lab", "system": "renal", "code": "creatinine", "value": 0.8, "unit": "mg/dL", "ref_low": 0.6, "ref_high": 1.1, "encounter_id": "g3", "note": "normal"}
+  ]
+}

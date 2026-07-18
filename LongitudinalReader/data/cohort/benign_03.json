@@ -1,0 +1,121 @@
+{
+  "patient": {
+    "id": "benign-03",
+    "name": "James Rossi",
+    "age": 60,
+    "sex": "female",
+    "active_conditions": [],
+    "active_meds": []
+  },
+  "source": "cohort",
+  "events": [
+    {
+      "date": "2021-02-26",
+      "type": "lab",
+      "system": "endocrine",
+      "code": "tsh",
+      "value": 2.1,
+      "unit": "mIU/L",
+      "ref_low": 0.4,
+      "ref_high": 4.0,
+      "encounter_id": "v2021"
+    },
+    {
+      "date": "2022-03-21",
+      "type": "lab",
+      "system": "endocrine",
+      "code": "tsh",
+      "value": 1.6,
+      "unit": "mIU/L",
+      "ref_low": 0.4,
+      "ref_high": 4.0,
+      "encounter_id": "v2022"
+    },
+    {
+      "date": "2023-03-18",
+      "type": "lab",
+      "system": "endocrine",
+      "code": "tsh",
+      "value": 2.0,
+      "unit": "mIU/L",
+      "ref_low": 0.4,
+      "ref_high": 4.0,
+      "encounter_id": "v2023"
+    },
+    {
+      "date": "2021-02-26",
+      "type": "lab",
+      "system": "renal",
+      "code": "egfr",
+      "value": 103.5,
+      "unit": "mL/min/1.73m2",
+      "ref_low": 90,
+      "ref_high": 120,
+      "encounter_id": "v2021"
+    },
+    {
+      "date": "2022-03-21",
+      "type": "lab",
+      "system": "renal",
+      "code": "egfr",
+      "value": 99.4,
+      "unit": "mL/min/1.73m2",
+      "ref_low": 90,
+      "ref_high": 120,
+      "encounter_id": "v2022"
+    },
+    {
+      "date": "2023-03-18",
+      "type": "lab",
+      "system": "renal",
+      "code": "egfr",
+      "value": 103.5,
+      "unit": "mL/min/1.73m2",
+      "ref_low": 90,
+      "ref_high": 120,
+      "encounter_id": "v2023"
+    },
+    {
+      "date": "2021-02-26",
+      "type": "lab",
+      "system": "endocrine",
+      "code": "a1c",
+      "value": 5.3,
+      "unit": "%",
+      "ref_low": 4.0,
+      "ref_high": 5.7,
+      "encounter_id": "v2021"
+    },
+    {
+      "date": "2022-03-21",
+      "type": "lab",
+      "system": "endocrine",
+      "code": "a1c",
+      "value": 5.1,
+      "unit": "%",
+      "ref_low": 4.0,
+      "ref_high": 5.7,
+      "encounter_id": "v2022"
+    },
+    {
+      "date": "2023-03-18",
+      "type": "lab",
+      "system": "endocrine",
+      "code": "a1c",
+      "value": 5.3,
+      "unit": "%",
+      "ref_low": 4.0,
+      "ref_high": 5.7,
+      "encounter_id": "v2023"
+    },
+    {
+      "date": "2023-03-18",
+      "type": "symptom",
+      "system": "constitutional",
+      "text": "dizziness",
+      "attribution": "orthostatic, hydration advised",
+      "clinician": "PCP",
+      "encounter_id": "v2023"
+    }
+  ]
+}

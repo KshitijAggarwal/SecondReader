@@ -1,0 +1,112 @@
+{
+  "patient": {
+    "id": "benign-02",
+    "name": "Aisha Patel",
+    "age": 59,
+    "sex": "female",
+    "active_conditions": [],
+    "active_meds": []
+  },
+  "source": "cohort",
+  "events": [
+    {
+      "date": "2021-06-16",
+      "type": "lab",
+      "system": "endocrine",
+      "code": "tsh",
+      "value": 2.0,
+      "unit": "mIU/L",
+      "ref_low": 0.4,
+      "ref_high": 4.0,
+      "encounter_id": "v2021"
+    },
+    {
+      "date": "2022-06-03",
+      "type": "lab",
+      "system": "endocrine",
+      "code": "tsh",
+      "value": 1.6,
+      "unit": "mIU/L",
+      "ref_low": 0.4,
+      "ref_high": 4.0,
+      "encounter_id": "v2022"
+    },
+    {
+      "date": "2023-06-07",
+      "type": "lab",
+      "system": "endocrine",
+      "code": "tsh",
+      "value": 2.0,
+      "unit": "mIU/L",
+      "ref_low": 0.4,
+      "ref_high": 4.0,
+      "encounter_id": "v2023"
+    },
+    {
+      "date": "2021-06-16",
+      "type": "lab",
+      "system": "renal",
+      "code": "creatinine",
+      "value": 0.9,
+      "unit": "mg/dL",
+      "ref_low": 0.6,
+      "ref_high": 1.1,
+      "encounter_id": "v2021"
+    },
+    {
+      "date": "2022-06-03",
+      "type": "lab",
+      "system": "renal",
+      "code": "creatinine",
+      "value": 0.8,
+      "unit": "mg/dL",
+      "ref_low": 0.6,
+      "ref_high": 1.1,
+      "encounter_id": "v2022"
+    },
+    {
+      "date": "2023-06-07",
+      "type": "lab",
+      "system": "renal",
+      "code": "creatinine",
+      "value": 0.9,
+      "unit": "mg/dL",
+      "ref_low": 0.6,
+      "ref_high": 1.1,
+      "encounter_id": "v2023"
+    },
+    {
+      "date": "2021-06-16",
+      "type": "lab",
+      "system": "renal",
+      "code": "egfr",
+      "value": 104.5,
+      "unit": "mL/min/1.73m2",
+      "ref_low": 90,
+      "ref_high": 120,
+      "encounter_id": "v2021"
+    },
+    {
+      "date": "2022-06-03",
+      "type": "lab",
+      "system": "renal",
+      "code": "egfr",
+      "value": 100.1,
+      "unit": "mL/min/1.73m2",
+      "ref_low": 90,
+      "ref_high": 120,
+      "encounter_id": "v2022"
+    },
+    {
+      "date": "2023-06-07",
+      "type": "lab",
+      "system": "renal",
+      "code": "egfr",
+      "value": 104.0,
+      "unit": "mL/min/1.73m2",
+      "ref_low": 90,
+      "ref_high": 120,
+      "encounter_id": "v2023"
+    }
+  ]
+}
