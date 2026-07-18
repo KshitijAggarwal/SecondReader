@@ -1,0 +1,13 @@
+{
+  "trial_id": "NCT06921902",
+  "version": "v1",
+  "source": "ClinicalTrials.gov API v2",
+  "fetched_at": "2026-07-18",
+  "simulated_amendment_date": null,
+  "brief_title": "Glycemic Metrics and Patterns in People With and Without Prediabetes",
+  "minimum_age": "18 Years",
+  "maximum_age": null,
+  "sex": "ALL",
+  "healthy_volunteers": true,
+  "eligibility_criteria": "Inclusion Criteria:\n\n* Subject must be at least 18 years of age.\n* Subject must be willing and able to provide written signed and dated informed consent.\n\nExclusion Criteria:\n\n* Subject has a diagnosis of type 1 diabetes, type 2 diabetes, or gestational diabetes.\n* Subject is known to be currently practicing a low-carbohydrate or ketogenic diet at the time of enrollment.\n* Subject is known to be pregnant at the time of enrollment.\n* Subject has known allergy to medical grade adhesive, isopropyl alcohol and/or ethyl alcohol used to disinfect skin.\n* Subject is currently on any form of treatment indicated for the treatment of diabetes.\n* Subject is currently on any form of medication indicated for weight loss."
+}
