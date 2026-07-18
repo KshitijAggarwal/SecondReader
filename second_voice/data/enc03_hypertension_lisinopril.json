@@ -1,0 +1,26 @@
+{
+  "id": "sv-demo-03::enc-htn",
+  "metadata": {
+    "synthetic": true,
+    "encounter_id": "enc03_hypertension_lisinopril",
+    "date": "2026-07-18T14:00:00-07:00",
+    "visit_type": "Office visit",
+    "visit_title": "New high blood pressure — starting lisinopril"
+  },
+  "patient_context": {
+    "patient": {
+      "resourceType": "Patient",
+      "name": [{"use": "official", "family": "Nguyen", "given": ["Thomas"], "prefix": ["Mr."]}],
+      "gender": "male",
+      "birthDate": "1979-06-21"
+    },
+    "longitudinal_summary": {
+      "condition_labels": ["Essential hypertension (new)"],
+      "medication_labels": []
+    },
+    "allergies": []
+  },
+  "transcript": "DR: Thomas, thanks for coming back in for the recheck. We had you monitor your blood pressure at home over the last two weeks — how did the numbers look?\nPT: Yeah, I wrote them down. Most mornings it was around 148 over 92, sometimes higher.\nDR: That lines up with what we saw here. Consistently in that range, that's stage 2 high blood pressure, so this isn't a one-off.\nPT: Okay. So it's official then.\nDR: It is. The good news is it's very treatable. I'd like to start you on a medication called lisinopril, along with the diet and exercise changes we talked about.\nPT: Lisinopril. What does it do?\nDR: It relaxes your blood vessels so your heart doesn't have to push as hard. You'll take 10 milligrams once a day, in the morning. Same time each day is best.\nPT: Ten milligrams, once in the morning. Any side effects I should know about?\nDR: The most common one is a dry, tickly cough — if that shows up and it's annoying, tell me, because we can switch you to a different one. It's not dangerous, just bothersome.\nPT: A dry cough, okay, I'll let you know.\nDR: We'll also check your kidney function and potassium with a blood test in about two weeks, since this medication can affect those. The front desk will set that up.\nPT: Blood test in two weeks, got it.\nDR: Keep logging your morning readings too — bring the log to the next visit so we can see if the dose is doing its job.\nPT: Will do. I've already cut way back on the salt like we said.\nDR: That's great, keep that going. Let's plan to see you back in a month.\nPT: One month. Sounds good.\nDR: Now, one thing I need you to take seriously: this is rare, but if you ever notice swelling of your lips, tongue, face, or your throat feeling tight, or trouble breathing — stop the medication and get to an emergency room right away. Don't wait on that one.\nPT: Swelling of the lips or tongue, or trouble breathing — go to the ER and stop the pill. Understood.\nDR: Perfect. That's exactly it. Everything else, just call the office.\nPT: Thanks, doctor. I appreciate it.\nDR: You're welcome, Thomas. See you in a month.",
+  "note": "**Subjective:** Mr. Nguyen is a 47-year-old man presenting for blood-pressure recheck after two weeks of home monitoring. Home readings consistently ~148/92. No chest pain, dyspnea, headaches, or visual changes. Already reducing dietary salt.\n\n**Objective:** BP confirmed in stage 2 hypertension range. Otherwise well.\n\n**Assessment & Plan:**\n- New essential hypertension, stage 2, confirmed by home readings. Start lisinopril 10 mg once daily in the morning. Counseled on possible dry cough (report if bothersome — can switch agents).\n- Basic metabolic panel (renal function, potassium) in ~2 weeks.\n- Continue lifestyle changes: low-sodium diet, exercise. Continue home BP logging.\n- Return precautions: angioedema — swelling of lips/tongue/face, throat tightness, or difficulty breathing — stop medication and seek emergency care immediately.\n- Follow-up in 1 month.",
+  "after_visit_summary": "Visit summary\n\nWhat we discussed\n• New high blood pressure (stage 2)\n• Starting a blood pressure medication\n\nNext steps\n• Start lisinopril 10 mg every morning.\n• Get a blood test in about 2 weeks (kidney function and potassium).\n• Keep logging your morning blood pressure and bring the log.\n• Keep up the low-salt diet and exercise.\n• Follow up in 1 month."
+}

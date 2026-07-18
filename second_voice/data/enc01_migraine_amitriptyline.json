@@ -1,0 +1,26 @@
+{
+  "id": "sv-demo-01::enc-migraine",
+  "metadata": {
+    "synthetic": true,
+    "encounter_id": "enc01_migraine_amitriptyline",
+    "date": "2026-07-18T09:10:00-07:00",
+    "visit_type": "Office visit",
+    "visit_title": "Migraine follow-up — starting a preventive medication"
+  },
+  "patient_context": {
+    "patient": {
+      "resourceType": "Patient",
+      "name": [{"use": "official", "family": "Alvarez", "given": ["Marisol"], "prefix": ["Ms."]}],
+      "gender": "female",
+      "birthDate": "1992-03-14"
+    },
+    "longitudinal_summary": {
+      "condition_labels": ["Chronic migraine without aura", "Iron-deficiency anemia (resolved)"],
+      "medication_labels": ["Ibuprofen 400 mg as needed"]
+    },
+    "allergies": ["Penicillin (rash)"]
+  },
+  "transcript": "DR: Marisol, good to see you again. Last time we talked about how often the headaches were hitting — how have the last few weeks been?\nPT: Honestly rough. I'm getting them maybe three, four times a week now. The ibuprofen barely touches it anymore.\nDR: Three to four a week is a lot. And you're taking the ibuprofen most of those days?\nPT: Pretty much. Some weeks every day.\nDR: Okay. That's actually part of what I want to change, because taking a painkiller that often can start causing its own rebound headaches. So today I'd like to start you on something to prevent the migraines rather than just chase them.\nPT: Prevent them, okay. What is it?\nDR: It's called amitriptyline. It's an older medication, we use a low dose of it for migraine prevention. You'll take it at night because it can make you a little drowsy at first.\nPT: At night, got it. How much?\nDR: We start low. Ten milligrams every night for the first two weeks, and if you tolerate it fine we'll go up to twenty. Take it about an hour before bed.\nPT: Ten milligrams, at night, then maybe twenty. Will it knock me out?\nDR: The first week or so you might feel groggy in the morning — that usually settles. Don't drive if you feel foggy. Dry mouth is the other common one.\nPT: Okay, I can live with that. Should I stop the ibuprofen?\nDR: Cut it back — use it only for a bad breakthrough day, not daily. Let's aim for no more than twice a week.\nPT: No more than twice a week. And how long until I know if it's working?\nDR: Give it a solid six weeks before we judge it. Prevention meds take time to build up. Keep a little headache log — days you get one, how bad, what you took.\nPT: I can do a log. My sister has migraines too, she said hers came with flashing lights before. I've never had that.\nDR: Right, yours have always been without the visual aura, and that's stayed the same, which is good.\nPT: One more thing — my jaw's been clicking, is that related?\nDR: Probably separate, let's keep an eye on it and revisit if it gets painful. Let's book you back in six weeks.\nPT: Sounds good. Thanks, doctor.\nDR: Of course. The front desk will set up the follow-up.\nPT: Great, see you then.\nDR: Oh — Marisol, one important thing before you go: if you ever get a headache that's suddenly the worst one of your life, or it comes on like a thunderclap in seconds, or you get any weakness, trouble speaking, or vision loss with it — that's not a migraine, don't wait it out, go to the emergency room. Okay?\nPT: Oh — okay. Worst ever or sudden, go in. Got it.\nDR: Exactly. Take care.",
+  "note": "**Subjective:** Ms. Alvarez is a 34-year-old woman with chronic migraine without aura, here for follow-up. Reports increased frequency to 3–4 headaches per week with near-daily ibuprofen use and declining relief. No aura, no new neurologic features; pattern unchanged otherwise. Also notes intermittent jaw clicking, non-painful.\n\n**Objective:** Well-appearing, no acute distress. Neurologic exam grossly nonfocal.\n\n**Assessment & Plan:**\n- Chronic migraine without aura, increasing frequency with likely medication-overuse component. Start amitriptyline 10 mg nightly x2 weeks, then increase to 20 mg nightly if tolerated. Counseled on morning grogginess and dry mouth; advised not to drive if foggy.\n- Reduce ibuprofen to no more than twice weekly for breakthrough only.\n- Maintain a headache log (frequency, severity, treatment).\n- Return precautions reviewed: sudden/thunderclap or worst-ever headache, or headache with focal neurologic deficit — seek emergency care.\n- Follow-up in 6 weeks.",
+  "after_visit_summary": "Visit summary\n\nWhat we discussed\n• Chronic migraine, happening more often\n• Starting a preventive medication\n\nNext steps\n• Start amitriptyline 10 mg at night for 2 weeks, then 20 mg at night if tolerated.\n• Cut back ibuprofen to no more than twice a week.\n• Keep a headache log.\n• Follow up in 6 weeks."
+}

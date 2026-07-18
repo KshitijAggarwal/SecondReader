@@ -1,0 +1,26 @@
+{
+  "id": "sv-demo-02::enc-diabetes",
+  "metadata": {
+    "synthetic": true,
+    "encounter_id": "enc02_diabetes_followup",
+    "date": "2026-07-18T11:30:00-07:00",
+    "visit_type": "Office visit",
+    "visit_title": "Type 2 diabetes follow-up — adjusting metformin"
+  },
+  "patient_context": {
+    "patient": {
+      "resourceType": "Patient",
+      "name": [{"use": "official", "family": "Okafor", "given": ["Daniel"], "prefix": ["Mr."]}],
+      "gender": "male",
+      "birthDate": "1968-11-02"
+    },
+    "longitudinal_summary": {
+      "condition_labels": ["Type 2 diabetes mellitus", "Essential hypertension", "Overweight"],
+      "medication_labels": ["Metformin 500 mg twice daily", "Lisinopril 10 mg daily"]
+    },
+    "allergies": []
+  },
+  "transcript": "DR: Daniel, thanks for coming in. Your labs from last week came back, so let's go through them. How have you been feeling overall?\nPT: Pretty okay. Tired sometimes. The main thing is my A1c, right?\nDR: Right. Your A1c came back at 8.1. Last time it was 7.4, so it's crept up a bit.\nPT: That's the sugar average thing. Higher than we want.\nDR: Exactly, the three-month average. Our goal for you is under 7. So I want to adjust your metformin — you're on 500 milligrams twice a day now, let's move you to 1000 milligrams twice a day.\nPT: Double it. Morning and night, with food?\nDR: Yes, with meals — that helps with the stomach upset it can cause. If you get some loose stool the first week, that usually settles.\nPT: Okay. One thing I wanted to mention — the last month or so my feet have been kind of numb and tingly, especially at night. Like pins and needles.\nDR: Okay. Let me ask — are you checking your sugars at home regularly?\nPT: Most mornings. They're usually around 150, 160.\nDR: Those morning numbers line up with the A1c. Let's also make sure we get your eyes checked — when was your last retinal exam?\nPT: Uh, over a year ago I think.\nDR: Let's get that scheduled, diabetes can affect the eyes so we want a yearly look. I'll put in the referral.\nPT: Alright.\nDR: And keep working on the diet side — cutting back on the sugary drinks especially would help those morning numbers a lot.\nPT: Yeah, I've been having a soda with lunch. I can switch to water.\nDR: That alone can make a real difference. Let's recheck your A1c in three months and see where the higher metformin dose gets us.\nPT: Three months, okay.\nDR: I'll have the nurse set up the eye referral and the lab. Anything else on your mind today?\nPT: No, I think that's it.\nDR: Great. Keep up the home checks and we'll talk in three months.\nPT: Thanks, doctor.",
+  "note": "**Subjective:** Mr. Okafor is a 57-year-old man with type 2 diabetes, hypertension, and overweight, here for routine diabetes follow-up. Reports feeling generally well, occasional fatigue. Checks fasting glucose most mornings, typically 150–160. Reports one sugary beverage daily.\n\n**Objective:** A1c 8.1% (prior 7.4%). BP at goal on lisinopril.\n\n**Assessment & Plan:**\n- Type 2 diabetes, suboptimal control (A1c 8.1%, up from 7.4%). Increase metformin from 500 mg BID to 1000 mg BID, taken with meals; counseled on transient GI upset.\n- Dietary counseling: reduce sugar-sweetened beverages, substitute water.\n- Overdue diabetic retinal exam — referral placed for annual screening.\n- Recheck A1c in 3 months.\n- Continue lisinopril; BP at goal.",
+  "after_visit_summary": "Visit summary\n\nWhat we discussed\n• Diabetes — A1c has gone up\n• Adjusting your diabetes medication\n\nNext steps\n• Increase metformin to 1000 mg twice a day, with meals.\n• Cut back on sugary drinks; switch to water.\n• Get your yearly diabetic eye exam (referral placed).\n• Recheck A1c in 3 months.\n• Keep continue checking your sugars in the morning."
+}
