@@ -14,13 +14,13 @@ all 25 records (missing fields, multiple encounters, longitudinal history, etc.)
 """
 
 import json
+import os
 from pathlib import Path
 
-DATASET = (
-    Path(__file__).resolve().parent.parent
-    / "synthetic-ambient-fhir-25"
-    / "synthetic-ambient-fhir-25.jsonl"
-)
+# Dataset resolution: SECONDREADER_DATA env override, else the copy bundled in
+# the repo under poc/data/. Keeps the repo self-contained / clone-and-run.
+_DEFAULT = Path(__file__).resolve().parent / "data" / "synthetic-ambient-fhir-25.jsonl"
+DATASET = Path(os.environ.get("SECONDREADER_DATA", _DEFAULT))
 
 # Prediabetes young-adult patient — HbA1c 6.24%, BMI 31.4, carries an
 # epinephrine auto-injector. Good demo: prediabetes (not diabetes) + a subtle
