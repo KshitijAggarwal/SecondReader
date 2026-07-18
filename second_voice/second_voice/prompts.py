@@ -55,15 +55,22 @@ CLARIFY_RECON = CORE + """
 STAGE 2 - CLARIFY (reconstruction). Using ONLY the grounded items from Stage 1, build a \
 plain-language reconstruction of the visit for the patient, in two visually distinct channels.
 
+This is a RECAP, not a transcript. Restraint is the product: surface only what matters \
+most for the patient to remember. Fewer, clearer points beat a complete list.
+
 - greeting: one short warm sentence.
-- doctor_said: the key things the doctor said, each rewritten in plain ~6th-grade language, \
-each with the exact quote and line_id it came from. Cover the important plan items and any \
-return precautions. Do not add anything the doctor did not say.
-- general_info: for a drug/test/term the doctor NAMED, you MAY add ONE clearly-labeled \
-general-education definition. Phrase it generically ("In general, X is used to...") and NEVER \
-personally ("you should take..."). Set grounded_line_id to the line where the doctor named it. \
-Only include terms that actually appear in Stage 1's entities. If nothing warrants a definition, \
-return an empty list.
+- doctor_said: AT MOST 5 points, ordered most-important first (lead with anything about \
+when to seek help, then medication changes, then the rest). Each point is ONE short, plain \
+~6th-grade sentence (aim for under 20 words) that the patient could actually hold onto. \
+Merge related instructions into a single point rather than listing each separately. \
+Still attach the exact quote + line_id to every point (used for auditing, not shown to the \
+patient). Do not add anything the doctor did not say.
+- general_info: only if it genuinely helps a layperson, add a clearly-labeled \
+general-education definition for a confusing term the doctor NAMED. AT MOST 2, and prefer \
+zero if the doctor's own words were already clear. Phrase it generically ("In general, X is \
+used to...") and NEVER personally ("you should take..."). Keep each to one short sentence. \
+Set grounded_line_id to the line where the doctor named it. Only include terms that actually \
+appear in Stage 1's entities. If nothing warrants a definition, return an empty list.
 """
 
 CLARIFY_QA = CORE + """

@@ -57,7 +57,17 @@ pip install -r requirements.txt
 python -m second_voice                              # interactive picker
 python -m second_voice enc01_migraine_amitriptyline # a specific encounter
 python -m second_voice dataset:3                    # any of the 25 synthetic records
+python -m second_voice enc01_... --show-sources     # render quotes inline (audit view)
 ```
+
+### Citations: grounded, but not in the patient's face
+
+The grounding contract (a verbatim quote + line_id behind every claim) is what makes
+this safe — but it's an **audit artifact, not patient UX**. So by default the patient
+sees clean plain-language prose; the quotes are still validated on every call and
+written in full to the audit log. To see a claim's exact source words, the patient
+types `s` ("see your doctor's exact words"); an auditor or clinician can launch with
+`--show-sources` to render every quote inline.
 
 The CLI: loads the encounter and runs Stage 1 → prints the "few hours later"
 notification → shows the two-channel reconstruction → offers (never forces) three

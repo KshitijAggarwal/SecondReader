@@ -30,22 +30,45 @@ def c(key: str, text: str) -> str:
     return f"{_C[key]}{text}{_C['reset']}"
 
 
+# Grounding (quote + line_id) is validated and written to the audit log on every
+# call, but by default we DON'T show it to the patient — it's an audit artifact,
+# not patient UX. STATE["last_doc"] remembers the last grounded block so the patient
+# can pull up the exact words on demand ('s'), and --show-sources renders them inline.
+STATE = {"show_sources": False, "last_doc": []}
+
+
 def hr() -> None:
     print(c("dim", "─" * 66))
 
 
 def _print_channels(doctor_said: list[dict], general_info: list[dict], enc) -> None:
+    STATE["last_doc"] = doctor_said
     if doctor_said:
         print(c("doc", c("bold", "  ▎What your doctor said")))
         for p in doctor_said:
             plain = p.get("plain") or p.get("answer") or ""
             print(c("doc", f"   • {plain}"))
-            print(c("dim", f"       “{p['quote']}”  [{p['line_id']}]"))
+            if STATE["show_sources"]:
+                print(c("dim", f"       “{p['quote']}”  [{p['line_id']}]"))
     if general_info:
         print()
         print(c("gen", c("bold", "  ▎General info (not from your visit — background only)")))
         for d in general_info:
             print(c("gen", f"   • {d['term']}: {d['definition']}"))
+    if doctor_said and not STATE["show_sources"]:
+        print(c("dim", "   (type 's' to see your doctor's exact words for these)"))
+
+
+def _show_sources() -> None:
+    doc = STATE.get("last_doc") or []
+    if not doc:
+        print(c("dim", "  Nothing to show the source for yet."))
+        return
+    print(c("doc", c("bold", "  ▎Your doctor's exact words")))
+    for p in doc:
+        plain = p.get("plain") or p.get("answer") or ""
+        print(c("doc", f"   • {plain}"))
+        print(c("dim", f"       “{p['quote']}”  [{p['line_id']}]"))
 
 
 def run(encounter_id: str) -> None:
@@ -94,30 +117,37 @@ def _menu(enc, g, log) -> None:
         print("   1  ask a question about the visit")
         print("   2  anything I might've missed?")
         print("   3  one thing to remember")
-        print("   q  I'm done")
+        print(c("dim", "   s  see your doctor's exact words   ·   q  I'm done"))
         try:
-            choice = input("  > ").strip().lower()
+            raw = input("  > ").strip()
         except (EOFError, KeyboardInterrupt):
-            choice = "q"
+            raw = "q"
+        parts = raw.split(maxsplit=1)
+        choice = parts[0].lower() if parts else ""
+        rest = parts[1] if len(parts) > 1 else ""
 
         if choice in ("q", "quit", "exit", ""):
             print(c("warm", "\n  Take care. Your doctor's advice is the plan — this was just to help it land.\n"))
             return
         if choice == "1":
-            _ask(enc, g, log)
+            _ask(enc, g, log, preset=rest)
         elif choice == "2":
             _surface(enc, g, log)
         elif choice == "3":
             _teachback(enc, g, log)
+        elif choice in ("s", "source", "sources"):
+            _show_sources()
         else:
-            print(c("dim", "  (didn't catch that — pick 1, 2, 3, or q)"))
+            print(c("dim", "  (didn't catch that — pick 1, 2, 3, s, or q)"))
 
 
-def _ask(enc, g, log) -> None:
-    try:
-        q = input(c("warm", "  Ask about today's visit: ")).strip()
-    except (EOFError, KeyboardInterrupt):
-        return
+def _ask(enc, g, log, preset: str = "") -> None:
+    q = preset
+    if not q:
+        try:
+            q = input(c("warm", "  Ask about today's visit: ")).strip()
+        except (EOFError, KeyboardInterrupt):
+            return
     if not q:
         return
     print(c("dim", "  checking what was said today …\n"))
@@ -176,7 +206,8 @@ def _teachback(enc, g, log) -> None:
 
 
 def main() -> None:
-    args = sys.argv[1:]
+    args = [a for a in sys.argv[1:] if a != "--show-sources"]
+    STATE["show_sources"] = "--show-sources" in sys.argv
     if args and args[0] not in ("-h", "--help"):
         run(args[0])
         return
