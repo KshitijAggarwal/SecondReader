@@ -100,10 +100,13 @@ def run_one(llm, record, version, fresh):
     return trial, result
 
 
-def print_verdict(record, trial, result):
+def print_verdict(record, trial, result, label=None):
     d = patient_loader.extract_chart(record)["demographics"]
-    name = record["patient_context"]["patient"]["name"][0]
-    who = f"{' '.join(name['given'])} {name['family']}"
+    if label:
+        who = label
+    else:
+        name = record["patient_context"]["patient"]["name"][0]
+        who = f"{' '.join(name['given'])} {name['family']}"
     amend = trial.get("simulated_amendment_date")
     tag = f"AMENDED {amend}" if amend else "ORIGINAL"
     color = VERDICT_COLOR.get(result["overall"], "")
@@ -179,6 +182,7 @@ def main():
     ap.add_argument("--patients", type=int, default=25, help="site size for --savings")
     ap.add_argument("--manual-min", type=float, default=MANUAL_MIN_DEFAULT, help="manual min/patient")
     ap.add_argument("--guard-sec", type=float, default=GUARD_SEC_MEASURED, help="TrialGuard sec/patient")
+    ap.add_argument("--label", help="override the displayed patient identity (e.g. 'Patient 2')")
     args = ap.parse_args()
 
     if args.savings:
@@ -203,12 +207,12 @@ def main():
     if args.compare:
         for ver in (PROTO_ORIG, PROTO_AMEND):
             trial, result = run_one(llm, record, ver, args.fresh)
-            print_verdict(record, trial, result)
+            print_verdict(record, trial, result, args.label)
         print()
     else:
         version = VERSION_ALIASES.get(args.protocol, args.protocol)
         trial, result = run_one(llm, record, version, args.fresh)
-        print_verdict(record, trial, result)
+        print_verdict(record, trial, result, args.label)
         print()
 
 
