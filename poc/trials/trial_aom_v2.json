@@ -1,0 +1,13 @@
+{
+  "trial_id": "NCT07163650",
+  "version": "aom_v2",
+  "source": "ClinicalTrials.gov API v2 (historical version 1, amendment posted 2026-01-25)",
+  "fetched_at": "2026-07-18",
+  "simulated_amendment_date": "2026-01-25",
+  "brief_title": "Evaluating Anti-Obesity Medications 6 Months After Metabolic Surgery",
+  "minimum_age": "18 Years",
+  "maximum_age": "55 Years",
+  "sex": "ALL",
+  "healthy_volunteers": false,
+  "eligibility_criteria": "Inclusion Criteria:\n\n* 6 months after metabolic surgery.\n* 18 years <= age <= 55 years.\n* Body Mass Index (BMI) >= 28 kg/m^2.\n* Voluntarily sign the informed consent form and agree to adhere to the study requirements.\n\nExclusion Criteria:\n\n* Suspected potential allergy to the study drug or its components.\n* Use of any of the following drugs or treatments prior to screening:\n  - Glucagon-like peptide-1 receptor (GLP-1R) agonists within 3 months prior to screening.\n  - Use within 3 months prior to screening of any weight-affecting medications, including systemic corticosteroids.\n  - Use of weight-affecting herbal supplements, health products, or meal replacements within 3 months prior to screening.\n  - Use of weight-loss medications within 3 months prior to screening or currently using such medications (e.g. sibutramine, orlistat, phentermine).\n* History of depression, or history of severe psychiatric disorders such as schizophrenia or bipolar disorder.\n* Uncontrolled hypertension at screening despite at least 4 weeks of antihypertensive medication.\n* History of malignancy at screening.\n* History of cardiac disease at screening: acute myocardial infarction, unstable angina, post-coronary artery bypass grafting, post-percutaneous coronary intervention, or severe arrhythmia.\n* Hemorrhagic or ischemic stroke, or transient ischemic attack within 6 months prior to screening.\n* History or family history of medullary thyroid carcinoma, or multiple endocrine neoplasia (MEN) type 2A or 2B.\n* History of acute or chronic pancreatitis, or pancreatic injury at screening.\n* Major or moderate surgery, severe trauma, or severe infection within 1 month prior to screening.\n* History of suicidal tendencies or suicide attempts.\n* Participants testing positive for HIV antibodies, hepatitis B surface antigen (HBsAg), or hepatitis C antibodies.\n* History of alcohol abuse within 1 month prior to screening.\n* Other risk factors for torsades de pointes, such as hypokalemia at screening, or family history of long QT syndrome."
+}

@@ -50,7 +50,10 @@ module — deliberately structured so the pieces can be hardened in parallel.
 
 ```
 poc/
-├── run_poc.py               # orchestrator — runs all 5 steps, prints each output
+├── run_poc.py               # orchestrator — runs all 5 steps for ONE (patient, trial)
+├── demo.py                  # amendment demo driver (verdicts, --diff, --compare, --savings)
+├── walkthrough.py           # narrated, on-screen guided run of the amendment demo
+├── DEMO.md                  # the amendment-demo beat sheet + recording tips
 ├── llm_client.py            # STEP 0: Anthropic client + health_check() (API smoke test)
 ├── patient_loader.py        # STEP 1: load ONE patient, flatten the FULL chart → digest
 ├── trial_client.py          # STEP 2: fetch/cache a trial from ClinicalTrials.gov
@@ -58,8 +61,12 @@ poc/
 │   ├── criteria_parser.py   # STEP 3: eligibility free-text → structured, checkable clauses
 │   ├── chart_reconciler.py  # STEP 4: clauses × full chart → per-clause verdicts  ← core reasoning
 │   └── confidence_engine.py # STEP 5: verdicts → MATCH / EXCLUDE / NEEDS_REVIEW  (deterministic)
-├── trials/trial_v1.json     # cached real trial fixture (NCT06921902, prediabetes)
-├── data/                    # bundled synthetic FHIR dataset (25 encounters)
+├── trials/trial_v1.json           # cached real trial fixture (NCT06921902, prediabetes)
+├── trials/trial_aom_v1.json       # NCT07163650 — ORIGINAL protocol (inclusion only)
+├── trials/trial_aom_v2.json       # NCT07163650 — AMENDED protocol (adds exclusions)
+├── build_cohort.py          # (re)build the 4-patient synthetic amendment cohort
+├── generate_prose.py        # (re)fill the cohort transcripts/notes
+├── data/                    # bundled synthetic FHIR dataset + trial_cohort.jsonl
 └── requirements.txt
 ```
 
@@ -104,7 +111,53 @@ real agents.
 
 ---
 
-## Demo: the reasoning that makes it worth building
+## Headline demo: the protocol amendment (v1 → v2)
+
+When a trial **protocol is amended**, patients who qualified yesterday can
+silently become ineligible — and the disqualifying fact is often buried in the
+structured chart, never mentioned in the visit. This is the demo that shows
+SecondReader earning its keep.
+
+Trial: [NCT07163650](https://clinicaltrials.gov/study/NCT07163650) — *"Evaluating
+Anti-Obesity Medications 6 Months After Metabolic Surgery,"* which has a **real
+recorded eligibility amendment** (`aom_v1` → `aom_v2`, a large new exclusion list).
+
+The cohort is four synthetic patients who all meet inclusion. Each flip patient
+carries exactly **one buried disqualifying fact** that appears only in the
+structured chart:
+
+| `--patient` | age | buried fact | `aom_v1` | `aom_v2` |
+|---|---|---|---|---|
+| `control`     | 42 | (none)                                | NEEDS_REVIEW | NEEDS_REVIEW |
+| `glp1` ★hero  | 45 | semaglutide (GLP-1) from an outside clinic | NEEDS_REVIEW | **EXCLUDE** |
+| `depression`  | 37 | major depressive disorder on problem list | NEEDS_REVIEW | **EXCLUDE** |
+| `hypokalemia` | 50 | serum potassium 3.0 mmol/L on outside labs | NEEDS_REVIEW | **EXCLUDE** |
+
+The money shot: the **same** patient flips `NEEDS_REVIEW → EXCLUDE` when only the
+protocol changes — citing the exact chart fact (e.g. *"Medication list includes
+Semaglutide 1 MG/0.75 ML Injection, a GLP-1 receptor agonist."*).
+
+```bash
+cd poc
+
+# narrated, on-screen guided run (each beat explains itself, then runs)
+../.venv/bin/python walkthrough.py            # Enter between beats
+../.venv/bin/python walkthrough.py --auto      # straight through
+
+# or drive it by hand
+../.venv/bin/python demo.py --list
+../.venv/bin/python demo.py --patient glp1 --compare   # v1 vs v2, stacked
+../.venv/bin/python demo.py --diff                      # the amendment diff
+../.venv/bin/python demo.py --savings --patients 25     # coordinator time saved
+```
+
+Verdicts are cached under `poc/.demo_cache/` so runs are instant and identical;
+pass `--fresh` to recompute against the live API. Full beat sheet in
+[`poc/DEMO.md`](poc/DEMO.md).
+
+---
+
+## Original demo: the reasoning that makes it worth building
 
 Patient: 22-year-old with **prediabetes** (HbA1c 6.24%, BMI 31.4).
 Trial: [NCT06921902](https://clinicaltrials.gov/study/NCT06921902), a real
@@ -177,10 +230,10 @@ of direction. Roughly in priority order:
    that best shows the product value* (kill the false positives, keep the
    real candidates).
 
-2. **The "stale protocol version" demo (v1 vs v2).**
-   Add `trials/trial_v2.json` — the same trial with 2–3 deliberately changed
-   criteria and an explicit `simulated_amendment_date`. Run one patient against
-   both versions to show, honestly, how an out-of-date protocol flips a verdict.
+2. ~~**The "stale protocol version" demo (v1 vs v2).**~~ **✅ Shipped** — see the
+   headline amendment demo above (`trials/trial_aom_v1.json` → `trial_aom_v2.json`,
+   NCT07163650, with a `simulated_amendment_date`). The same patient flips
+   `NEEDS_REVIEW → EXCLUDE` when only the protocol changes, with a cited chart fact.
    (No live amendment-history feed — the two-version fixture is the honest stand-in.)
 
 3. **Harden the core Chart Reconciler.**

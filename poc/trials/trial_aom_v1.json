@@ -1,0 +1,13 @@
+{
+  "trial_id": "NCT07163650",
+  "version": "aom_v1",
+  "source": "ClinicalTrials.gov API v2 (historical version 0, first posted 2025-09-01)",
+  "fetched_at": "2026-07-18",
+  "simulated_amendment_date": null,
+  "brief_title": "Evaluating Anti-Obesity Medications 6 Months After Metabolic Surgery",
+  "minimum_age": "18 Years",
+  "maximum_age": "55 Years",
+  "sex": "ALL",
+  "healthy_volunteers": false,
+  "eligibility_criteria": "Inclusion Criteria:\n\n* 6 months after metabolic surgery.\n* 18 years <= age <= 55 years.\n* Body Mass Index (BMI) >= 28 kg/m^2."
+}
