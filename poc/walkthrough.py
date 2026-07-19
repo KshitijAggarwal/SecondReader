@@ -24,40 +24,41 @@ BG_BLUE = "\033[44m\033[97m"
 # Each beat: (timecode, TITLE, narration lines, demo.py args)
 BEATS = [
     ("0:00-0:07", "MEET THE COHORT",
-     ["Four patients already screened INTO a real obesity-med trial (NCT07163650).",
-      "Every one of them meets all the inclusion criteria today."],
+     ["Four patients who already made it into a real obesity-med trial (NCT07163650).",
+      "Right now, all four meet the inclusion criteria."],
      ["--list"]),
 
-    ("0:07-0:18", "THE HERO'S CHART — READ IT CLOSELY",
-     ["Patient 'glp1' passes pre-screen. But buried in the STRUCTURED chart —",
-      "not the transcript, not the note — is an outside-clinic semaglutide (a GLP-1).",
-      "A human coordinator skimming the visit never sees it."],
+    ("0:07-0:18", "A closer look at one patient",
+     ["Patient 'glp1' cleared pre-screen. But his chart lists a semaglutide (a GLP-1)",
+      "prescribed by an outside clinic. That's in the medication data, not the visit note,",
+      "so a coordinator reading the transcript would never catch it."],
      ["--patient", "glp1", "--protocol", "v1"]),
 
-    ("0:18-0:28", "ORIGINAL PROTOCOL  →  PATIENT LOOKS FINE",
-     ["Against the ORIGINAL protocol (v1, inclusion-only, no exclusions),",
-      "TrialGuard returns NEEDS_REVIEW — i.e. eligible, pending consent. Green."],
+    ("0:18-0:28", "Checked against the original protocol",
+     ["The original protocol (v1) has inclusion criteria only, no exclusions.",
+      "So TrialGuard says NEEDS_REVIEW: eligible, just waiting on consent. Green."],
      ["--patient", "glp1", "--protocol", "v1"]),
 
-    ("0:28-0:33", "THE AMENDMENT LANDS",
-     ["The sponsor amends the protocol (v2, posted 2026-01-25) and adds a big new",
-      "exclusion list — including GLP-1 agonists. Here's the exact diff."],
+    ("0:28-0:33", "Then the protocol changes",
+     ["On 2026-01-25 the sponsor amended the protocol (v2) and added a set of",
+      "exclusions, GLP-1 agonists among them. Here's what changed."],
      ["--diff"]),
 
-    ("0:33-0:48", "AMENDED PROTOCOL  →  SAME PATIENT FLIPS TO EXCLUDE",
-     ["Nothing about the patient changed. Only the rules did. TrialGuard re-reads the",
-      "whole chart, finds the buried semaglutide, and flips NEEDS_REVIEW → EXCLUDE —",
-      "citing the exact chart fact. THIS citation is the credibility. Red."],
+    ("0:33-0:48", "Same patient, new rules",
+     ["The patient didn't change; the rules did. TrialGuard reads the chart again,",
+      "finds the semaglutide, and switches to EXCLUDE, pointing at the exact line",
+      "it used. That citation is what makes the call worth trusting. Red."],
      ["--patient", "glp1", "--protocol", "v2"]),
 
-    ("0:48-0:58", "THE WHOLE COHORT, BEFORE vs AFTER",
-     ["Control holds steady. Three others each flip for a DIFFERENT buried reason:",
-      "GLP-1, major depression, and a hypokalemia lab value — each with its citation."],
+    ("0:48-0:58", "The rest of the group",
+     ["The control patient stays put. The other three each drop for a different reason",
+      "buried in their chart: a GLP-1, major depression, and a low potassium lab.",
+      "Every call comes with the fact behind it."],
      None),  # special-cased: runs --compare for each patient
 
-    ("0:58-1:05", "THE PAYOFF — COORDINATOR TIME SAVED",
-     ["Re-screening a 25-patient site by hand vs. TrialGuard. Measured runtime vs.",
-      "a labeled manual-review assumption. This is the tangible ROI of a second reader."],
+    ("0:58-1:05", "What it saves",
+     ["Re-screening a 25-patient site by hand versus letting TrialGuard do it.",
+      "The tool's time is measured; the manual number is an estimate, and we label it as one."],
      ["--savings", "--patients", "25"]),
 ]
 
@@ -76,6 +77,7 @@ def banner(tc, title, lines):
 def run(args):
     cmd = [PY, str(HERE / "demo.py")] + args
     print(f"{DIM}$ python demo.py {' '.join(args)}{RESET}")
+    sys.stdout.flush()  # keep our prints ordered before subprocess output when piped/recorded
     subprocess.run(cmd, cwd=HERE)
 
 
@@ -97,9 +99,10 @@ def main():
     ap.add_argument("--pace", type=float, default=0.0, help="seconds between beats in --auto")
     args = ap.parse_args()
 
-    print(f"\n{BOLD}{CYAN}TrialGuard{RESET} — a second reader for clinical-trial eligibility.")
-    print(f"{DIM}When a protocol is amended, patients who qualified yesterday can silently")
-    print(f"become ineligible. TrialGuard re-reads the full chart and catches it, with a citation.{RESET}")
+    print(f"\n{BOLD}{CYAN}TrialGuard{RESET} is a second reader for clinical-trial eligibility.")
+    print(f"{DIM}When a protocol gets amended, patients who qualified yesterday can quietly become")
+    print(f"ineligible. TrialGuard flags them and shows the chart fact behind each call, so")
+    print(f"reviewers just confirm a short list instead of re-reading every chart.{RESET}")
 
     for tc, title, lines, cmd in BEATS:
         banner(tc, title, lines)
@@ -110,7 +113,7 @@ def main():
             run(cmd)
         pause(args.auto, args.pace)
 
-    print(f"\n{BOLD}{YELLOW}That's TrialGuard.{RESET} Same patient, amended rules, one buried fact — caught and cited.\n")
+    print(f"\n{BOLD}{YELLOW}That's the point:{RESET} the rules changed, one fact was buried in the chart, and TrialGuard caught it and showed its work.\n")
 
 
 if __name__ == "__main__":

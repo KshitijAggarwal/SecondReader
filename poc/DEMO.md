@@ -1,9 +1,14 @@
 # TrialGuard — Amendment Demo
 
-A "second reader" for clinical-trial eligibility. When a trial **protocol is amended**,
-patients who qualified yesterday may silently become ineligible — and the disqualifying
-fact is often buried in the structured chart, never mentioned in the visit. A human
-coordinator misses it. **TrialGuard re-reads the whole chart and catches it, with a citation.**
+A second reader for clinical-trial eligibility. When a trial **protocol is amended**, patients
+who qualified yesterday can quietly become ineligible, and the disqualifying fact is often buried
+in the structured chart where it never comes up in the visit. A coordinator reading the note
+misses it. **TrialGuard flags the patient and shows the chart fact behind the call, so reviewers
+confirm a short list instead of re-reading every chart.**
+
+> 10-second intro (spoken): *"When a protocol gets amended, patients who qualified yesterday can
+> quietly become ineligible. TrialGuard flags them and shows the chart fact behind each call, so
+> reviewers just confirm a short list instead of re-reading every chart."*
 
 ## The trial (real, from ClinicalTrials.gov)
 
