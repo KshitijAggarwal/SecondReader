@@ -1,8 +1,8 @@
-# SecondReader
+# TrialGuard
 
 **A pre-screen eligibility verification agent for clinical-trial referrals.**
 
-SecondReader is a *second reader* for AI-generated trial-candidate flags. It sits
+TrialGuard is a *second reader* for AI-generated trial-candidate flags. It sits
 **downstream** of any system that flags "this patient looks like a candidate for
 trial X" (e.g. an ambient-documentation tool) and independently re-checks that
 flag against (a) the trial's eligibility criteria and (b) the patient's **full
@@ -25,7 +25,7 @@ first pass** for reasons unrelated to clinical relevance:
    or resolved diagnosis that only exists in the structured chart.
 3. **Incompletely captured diagnoses.**
 
-SecondReader targets exactly those three failure modes by reasoning over the
+TrialGuard targets exactly those three failure modes by reasoning over the
 whole chart, and by never making the final call itself.
 
 ### Hard product constraint
@@ -99,7 +99,7 @@ real agents.
 ### Design choices worth knowing
 
 - **The Chart Reconciler reads the entire structured record**, not just facts
-  related to the visit. That's the whole reason SecondReader exists — if it only
+  related to the visit. That's the whole reason TrialGuard exists — if it only
   reasoned over the transcript, it would rebuild what upstream tools already do.
 - **Extended thinking** is on only for the reconciler (the one genuinely hard
   step: matching free-text clause intent to indirect chart evidence). Parsing and
@@ -116,7 +116,7 @@ real agents.
 When a trial **protocol is amended**, patients who qualified yesterday can
 silently become ineligible — and the disqualifying fact is often buried in the
 structured chart, never mentioned in the visit. This is the demo that shows
-SecondReader earning its keep.
+TrialGuard earning its keep.
 
 Trial: [NCT07163650](https://clinicaltrials.gov/study/NCT07163650) — *"Evaluating
 Anti-Obesity Medications 6 Months After Metabolic Surgery,"* which has a **real
